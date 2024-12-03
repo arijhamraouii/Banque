@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:jms="http://www.mulesoft.org/schema/mule/jms" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<jms:config name="JMS_Config" doc:name="JMS Config" doc:id="00ec4b37-9a93-4e40-be9e-d37bb5594d28" >
+		<jms:active-mq-connection />
+	</jms:config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="9aeedfa4-0ae3-4a79-9406-860860f39914" basePath="/satisfactions" >
+		<http:request-connection host="localhost" port="8087" />
+	</http:request-config>
+	<file:config name="File_Config" doc:name="File Config" doc:id="d7b79d06-103e-4059-af4c-39d1faf5cc54" >
+		<file:connection />
+	</file:config>
+	<flow name="esbproject2Flow" doc:id="27fbc268-91c2-4081-982a-99323b4215c2" >
+		<jms:listener doc:name="On New Message" doc:id="fb31d178-5c7c-4940-b192-90e772f9efcc" destination="comptetopic" config-ref="JMS_Config"/>
+		<ee:transform doc:name="Transform Message" doc:id="c748c9f7-0734-4be1-a9b8-178983b1bc1e" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	avis: payload.workflow.Satisfaction.avis,
+	description: payload.workflow.Satisfaction.description,
+	codeService: payload.workflow.Satisfaction.codeService,
+	score: payload.workflow.Satisfaction.score
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<http:request method="POST" doc:name="Request" doc:id="c7b2ee65-4f90-4dfb-af10-7a8a26dfcfc4" config-ref="HTTP_Request_configuration" path="/ajouter"/>
+		<file:write doc:name="Write" doc:id="5ec85a6a-ce76-477d-a1f8-2bb060fa497f" path="C:\Users\arijh\Desktop\semestre5\SOA\ATELIER SOA\PROJT BANQUE\mydirectory\satisfaction.txt" config-ref="File_Config"/>
+	</flow>
+</mule>

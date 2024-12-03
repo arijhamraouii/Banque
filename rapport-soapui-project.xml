@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="08bf88f5-9b8d-442c-8ec5-310cb43c026d" activeEnvironment="Default" name="rapport" resourceRoot="" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="29fe1c26-561a-49f7-b2ee-8ccb1ee52547" wsaVersion="NONE" name="BasicHttpBinding_IRapportService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IRapportService" soapVersion="1_1" anonymous="optional" definition="http://localhost:50495/RapportService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:50495/RapportService.svc?wsdl"><con:part><con:url>http://localhost:50495/RapportService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="RapportService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50495/RapportService.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://localhost:50495/RapportService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:50495/RapportService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFGestionRapport"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRapportService_GenererRapportCompte_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenererRapportCompte"/>
+  </wsdl:message>
+  <wsdl:message name="IRapportService_GenererRapportCompte_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenererRapportCompteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IRapportService_HistoriqueRapports_InputMessage">
+    <wsdl:part name="parameters" element="tns:HistoriqueRapports"/>
+  </wsdl:message>
+  <wsdl:message name="IRapportService_HistoriqueRapports_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HistoriqueRapportsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IRapportService">
+    <wsdl:operation name="GenererRapportCompte">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRapportService/GenererRapportCompte" message="tns:IRapportService_GenererRapportCompte_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IRapportService/GenererRapportCompteResponse" message="tns:IRapportService_GenererRapportCompte_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="HistoriqueRapports">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRapportService/HistoriqueRapports" message="tns:IRapportService_HistoriqueRapports_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IRapportService/HistoriqueRapportsResponse" message="tns:IRapportService_HistoriqueRapports_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRapportService" type="tns:IRapportService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GenererRapportCompte">
+      <soap:operation soapAction="http://tempuri.org/IRapportService/GenererRapportCompte" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistoriqueRapports">
+      <soap:operation soapAction="http://tempuri.org/IRapportService/HistoriqueRapports" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RapportService">
+    <wsdl:port name="BasicHttpBinding_IRapportService" binding="tns:BasicHttpBinding_IRapportService">
+      <soap:address location="http://localhost:50495/RapportService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:50495/RapportService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://localhost:50495/RapportService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFGestionRapport"/>
+  <xs:element name="GenererRapportCompte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numeroCompte" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="dateDebut" type="xs:dateTime"/>
+        <xs:element minOccurs="0" name="dateFin" type="xs:dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenererRapportCompteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GenererRapportCompteResult" nillable="true" type="q1:Rapport" xmlns:q1="http://schemas.datacontract.org/2004/07/WCFGestionRapport"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HistoriqueRapports">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numeroCompte" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HistoriqueRapportsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HistoriqueRapportsResult" nillable="true" type="q2:ArrayOfRapport" xmlns:q2="http://schemas.datacontract.org/2004/07/WCFGestionRapport"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:50495/RapportService.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFGestionRapport" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/WCFGestionRapport">
+  <xs:complexType name="Rapport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateDebut" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DateFin" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="NumeroCompte" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SoldeDebut" type="xs:double"/>
+      <xs:element minOccurs="0" name="SoldeFin" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rapport" nillable="true" type="tns:Rapport"/>
+  <xs:complexType name="ArrayOfRapport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rapport" nillable="true" type="tns:Rapport"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRapport" nillable="true" type="tns:ArrayOfRapport"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:50495/RapportService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:50495/RapportService.svc</con:endpoint></con:endpoints><con:operation id="febf3919-b964-451f-a84f-0f58031f630b" isOneWay="false" action="http://tempuri.org/IRapportService/GenererRapportCompte" name="GenererRapportCompte" bindingOperationName="GenererRapportCompte" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8872aa7c-55b6-4a3b-9fb0-94f97ea1307a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50495/RapportService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GenererRapportCompte>\r
+         <!--Optional:-->\r
+         <tem:numeroCompte>?</tem:numeroCompte>\r
+         <!--Optional:-->\r
+         <tem:dateDebut>?</tem:dateDebut>\r
+         <!--Optional:-->\r
+         <tem:dateFin>?</tem:dateFin>\r
+      </tem:GenererRapportCompte>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IRapportService/GenererRapportCompte"/></con:call><con:call id="2914e61c-4349-4318-8139-955c3651679b" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50495/RapportService.svc</con:endpoint><con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GenererRapportCompte xmlns="http://tempuri.org/">
+         <numeroCompte>123458</numeroCompte>
+         <dateDebut>2024-09-07</dateDebut>
+         <dateFin>2025-12-20</dateFin>
+      </GenererRapportCompte>
+   </s:Body>
+</s:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IRapportService/GenererRapportCompte"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="92cf3988-a5f3-4f9a-8751-b1949874b2f1" isOneWay="false" action="http://tempuri.org/IRapportService/HistoriqueRapports" name="HistoriqueRapports" bindingOperationName="HistoriqueRapports" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="41dd90e5-8c20-4c33-ad96-cbfac88bb211" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:50495/RapportService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:HistoriqueRapports>\r
+         <!--Optional:-->\r
+         <tem:numeroCompte>?</tem:numeroCompte>\r
+      </tem:HistoriqueRapports>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IRapportService/HistoriqueRapports"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

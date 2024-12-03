@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|c:\\users\\arijh\\desktop\\semestre5\\soa\\atelier soa\\projt banque\\servicerapportfinancier\\servicerapportfinancier\\rapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|solutionrelative:servicerapportfinancier\\rapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\servicerapportfinancier\\rapportservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}",
+      "RelativeMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|solutionrelative:servicerapportfinancier\\rapportservice.svc||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\servicerapportfinancier\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|solutionrelative:servicerapportfinancier\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\servicerapportfinancier\\irapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|solutionrelative:servicerapportfinancier\\irapportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\servicerapportfinancier\\service1.svc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF4F629-61D4-452E-8BB4-72D6627B57D2}|ServiceRapportFinancier\\ServiceRapportFinancier.csproj|solutionrelative:servicerapportfinancier\\service1.svc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:718629664:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\Web.config",
+              "RelativeDocumentMoniker": "ServiceRapportFinancier\\Web.config",
+              "ToolTip": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\Web.config",
+              "RelativeToolTip": "ServiceRapportFinancier\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-12-01T11:33:10.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IRapportService.cs",
+              "DocumentMoniker": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\IRapportService.cs",
+              "RelativeDocumentMoniker": "ServiceRapportFinancier\\IRapportService.cs",
+              "ToolTip": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\IRapportService.cs",
+              "RelativeToolTip": "ServiceRapportFinancier\\IRapportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T11:33:06.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RapportService.cs",
+              "DocumentMoniker": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\RapportService.cs",
+              "RelativeDocumentMoniker": "ServiceRapportFinancier\\RapportService.cs",
+              "ToolTip": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\RapportService.cs",
+              "RelativeToolTip": "ServiceRapportFinancier\\RapportService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDYAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T11:32:48.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Service1.svc.cs",
+              "DocumentMoniker": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\Service1.svc.cs",
+              "RelativeDocumentMoniker": "ServiceRapportFinancier\\Service1.svc.cs",
+              "ToolTip": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\Service1.svc.cs",
+              "RelativeToolTip": "ServiceRapportFinancier\\Service1.svc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T11:32:31.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RapportService.svc",
+              "DocumentMoniker": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\RapportService.svc",
+              "RelativeDocumentMoniker": "ServiceRapportFinancier\\RapportService.svc",
+              "ToolTip": "C:\\Users\\arijh\\Desktop\\semestre5\\SOA\\ATELIER SOA\\PROJT BANQUE\\ServiceRapportFinancier\\ServiceRapportFinancier\\RapportService.svc",
+              "RelativeToolTip": "ServiceRapportFinancier\\RapportService.svc",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003504|",
+              "WhenOpened": "2024-12-01T11:31:31.326Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

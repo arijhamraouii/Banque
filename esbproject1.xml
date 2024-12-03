@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:wsc="http://www.mulesoft.org/schema/mule/wsc"
+	xmlns:jms="http://www.mulesoft.org/schema/mule/jms"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/wsc http://www.mulesoft.org/schema/mule/wsc/current/mule-wsc.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="968c1c0d-4f5e-4b2b-8519-271c56efdd66" >
+		<http:listener-connection host="0.0.0.0" port="8092" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="c856c728-1734-4471-82b5-efc73fafe436" basePath="/banque" >
+		<http:request-connection host="localhost" port="8084" />
+	</http:request-config>
+	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="b39abf69-2846-4db3-a5db-b6ccf17749a4" >
+		<http:listener-connection host="0.0.0.0" port="8093" />
+	</http:listener-config>
+	<jms:config name="JMS_Config" doc:name="JMS Config" doc:id="f45c85a5-453c-41fd-8f1d-b99351aa398f" >
+		<jms:active-mq-connection />
+	</jms:config>
+	<http:request-config name="HTTP_Request_configuration1" doc:name="HTTP Request configuration" doc:id="7fffe7c6-d61e-4326-8fe1-fc8ef0e881c9" basePath="/transactions" >
+		<http:request-connection host="localhost" port="8086" />
+	</http:request-config>
+	<http:request-config name="HTTP_Request_configuration2" doc:name="HTTP Request configuration" doc:id="ff23636a-99fb-465f-94c8-71a5e8913eef" basePath="/transactions" >
+		<http:request-connection host="localhost" port="8086" />
+	</http:request-config>
+	<http:request-config name="HTTP_Request_configuration3" doc:name="HTTP Request configuration" doc:id="c9e1d84a-560a-446a-b6c4-b6ce885e91d2" basePath="/transactions" >
+		<http:request-connection host="localhost" port="8086" />
+	</http:request-config>
+	<wsc:config name="Web_Service_Consumer_Config" doc:name="Web Service Consumer Config" doc:id="5ab957f6-ce4c-43cc-a5c6-cbbd81510b2f" >
+		<wsc:connection soapVersion="SOAP12" wsdlLocation="http://localhost:50495/RapportService.svc?wsdl" service="RapportService" port="BasicHttpBinding_IRapportService" address="http://localhost:50495/RapportService.svc" />
+	</wsc:config>
+	<file:config name="File_Config" doc:name="File Config" doc:id="f0af4eca-e761-45b4-91d6-4eb0e239ab60" >
+		<file:connection workingDir="C:\Users\arijh\Desktop\semestre5\SOA\ATELIER SOA\PROJT BANQUE\mydirectory" />
+	</file:config>
+	<http:request-config name="HTTP_Request_configuration4" doc:name="HTTP Request configuration" doc:id="1129fd11-69b4-4b8c-8201-b066ef090a5e" basePath="/notifications" >
+		<http:request-connection host="localhost" port="8085" />
+	</http:request-config>
+	<flow name="esbproject1Flow" doc:id="114ee8a4-df54-4ff2-92e6-5c0ea187db75" >
+		<http:listener doc:name="Listener" doc:id="24488a64-32fb-4dcb-af3b-69361d58e4b9" config-ref="HTTP_Listener_config1" path="workflowcomptebanque"/>
+		<set-variable value="#[payload]" doc:name="Set Variable" doc:id="872a3aa6-bdaf-4177-8c09-48b8db21c8b4" variableName="comptePayload"/>
+		<ee:transform doc:name="Transform Message" doc:id="9187d7cf-16af-4abd-91e4-3dded8d0c9f2" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	numeroCompte: payload.workflow.createAccount.numeroCompte,
+	titulaire: payload.workflow.createAccount.titulaire,
+	solde: payload.workflow.createAccount.solde,
+	dateCreation: payload.workflow.createAccount.dateCreation
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<http:request method="POST" doc:name="Request" doc:id="c10bf778-b421-4178-9f39-a27f486c0550" config-ref="HTTP_Request_configuration" path="/comptes"/>
+		<jms:publish doc:name="Publish" doc:id="cbc8fb95-78c3-4bf4-b337-37bd53348f5f" config-ref="JMS_Config" destination="comptetopic" destinationType="TOPIC">
+			<jms:message >
+				<jms:body ><![CDATA[#[vars.comptePayload]]]></jms:body>
+			</jms:message>
+		</jms:publish>
+	</flow>
+	<flow name="esbproject1Flow1" doc:id="e0083657-c6d6-42f5-94c0-5515d5120929" >
+		<jms:listener doc:name="On New Message" doc:id="d37104b3-99d1-429e-8764-e0e71e065ce2" config-ref="JMS_Config" destination="comptetopic" numberOfConsumers="1">
+			<jms:consumer-type >
+				<jms:topic-consumer shared="true" />
+			</jms:consumer-type>
+		</jms:listener>
+		<ee:transform doc:name="Transform Message" doc:id="0138704e-f12e-4506-8fa8-71edbe3f8a96" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	id: payload.workflow.transaction.transactionId as Number,
+	numeroCompte: payload.workflow.transaction.numeroCompte,
+	montant: payload.workflow.transaction.montant,
+	typeTransaction: payload.workflow.transaction.typeTransaction,
+	dateTransaction: payload.workflow.transaction.dateTransaction
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<http:request method="POST" doc:name="Request" doc:id="4daee987-7e18-4b7e-8d64-64db42baeee0" config-ref="HTTP_Request_configuration3" path="/effectuer"/>
+	</flow>
+	<flow name="esbproject1Flow2" doc:id="3b554841-c859-4e41-8fd0-1953176141ef">
+		<jms:listener doc:name="On New Message" doc:id="9bc7cf73-fe1b-4a60-98e9-3b9c607e8337" config-ref="JMS_Config" destination="comptetopic" numberOfConsumers="1">
+			<jms:consumer-type>
+				<jms:topic-consumer shared="true" />
+			</jms:consumer-type>
+		</jms:listener>
+		<ee:transform doc:name="Transform Message" doc:id="758dc8f7-98cf-4558-9b77-4a10c46d9b3e">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+	id: payload.workflow.notification.notificationId as Number,
+	numeroCompte: payload.workflow.notification.numeroCompte,
+	message: payload.workflow.notification.message
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<http:request method="POST" doc:name="Request" doc:id="29328ec7-25c2-404b-bde0-94e6f88f8908" config-ref="HTTP_Request_configuration4" path="/envoyer" />
+	</flow>
+	<flow name="esbproject1Flow3" doc:id="a91f5397-5cc4-4697-832c-b5530e26b139">
+		<jms:listener doc:name="On New Message" doc:id="d3bd6332-a0b3-4019-86ee-dd518a9f7229" config-ref="JMS_Config" destination="comptetopic" numberOfConsumers="1">
+			<jms:consumer-type>
+				<jms:topic-consumer shared="true" />
+			</jms:consumer-type>
+		</jms:listener>
+		<ee:transform doc:name="Transform Message" doc:id="9ebb6197-11b8-49a2-b09b-ca006b276bf8">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/java
+---
+{
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<wsc:consume doc:name="Consume" doc:id="ee45906e-d5f2-4770-b4d3-ac10eea138e4" config-ref="Web_Service_Consumer_Config" operation="GenererRapportCompte" />
+		<ee:transform doc:name="Transform Message" doc:id="d1545e1d-ae4f-43ff-aed1-7ce2257c7110">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+payload.body]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<file:write doc:name="Write" doc:id="67de611d-63fc-4e82-a049-d90504633bd2" config-ref="File_Config" path="C:\Users\arijh\Desktop\semestre5\SOA\ATELIER SOA\PROJT BANQUE\mydirectory\rapport.txt" />
+	</flow>
+</mule>

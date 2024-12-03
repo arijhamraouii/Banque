@@ -1,0 +1,7 @@
+{
+    "id": 5,
+    "numeroCompte": "123456",
+    "montant": 700.0,
+    "typeTransaction": "Depot",
+    "dateTransaction": "2024-12-02T09:30:00"
+}

@@ -1,0 +1,35 @@
+{
+    "workflow": {
+        "createAccount":{
+            "numeroCompte": "123458",
+            "titulaire": "fatma Hamraoui",
+            "solde": 1500.0,
+            "dateCreation": "2024-12-01"
+        },
+        "transaction": {
+            "transactionId": "trans001",
+            "numeroCompte": "123457",
+            "typeTransaction": "Depot",
+            "montant": 700.0,
+            "dateTransaction": "2024-12-02T09:30:00"
+        },
+        "notification": {
+            "notificationId": "notif001",
+            "numeroCompte": "123458",
+            "message": "Transaction de 500.0 TND effectuée avec succès.",
+            "dateNotification": "2024-12-02T09:31:00"
+        },
+       "Rapport": {
+            "numeroCompte": "123458",
+            "dateDebut": "2024-01-01",
+            "dateFin": "2024-12-31"
+    },
+    "Satisfaction"  :{
+            "avis": 5,
+            "description": "Service exceptionnel",
+            "codeService": "crédit consommation",
+            "score": 8.5
+    }
+    }
+}
+
