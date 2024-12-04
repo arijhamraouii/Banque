@@ -10,11 +10,12 @@
 
 ## 🎯 **Description du Projet**
 **Projet Banque - Arij Hamraoui** est une solution intégrée basée sur :
-- **Spring Boot** pour les services REST.
-- **C#** pour les services SOAP.
-- **MuleSoft** pour l'orchestration des flux (ESB).
-- **MySQL** pour la gestion des données.
-- **ActiveMQ** pour la gestion des messages asynchrones.
+-☕ **Spring Boot** pour les services REST.
+-🌱 **C#** pour les services SOAP.
+-🐴 **MuleSoft** pour l'orchestration des flux (ESB).
+-🗄️ **MySQL** pour la gestion des données.
+-📩 **ActiveMQ** pour la gestion des messages asynchrones.
+-🔍 **Postman** pour les tests d'API .
 
 ### **Fonctionnalités :**
 - Création et gestion des comptes bancaires.
