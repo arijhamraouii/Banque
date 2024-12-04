@@ -5,7 +5,7 @@
 ---
 
 ## 🎯 **Description du Projet**  
-**Projet Banque - Arij Hamraoui** est une solution intégrée utilisant une architecture **SOA (Service-Oriented Architecture)**, basée sur :  
+** Banque est une solution intégrée utilisant une architecture **SOA (Service-Oriented Architecture)**, basée sur :  
 - ☕ **Spring Boot** pour les services REST.  
 - 💻 **C#** pour les services SOAP.  
 - 🐴 **MuleSoft** pour l'orchestration des flux (**ESB**).  
