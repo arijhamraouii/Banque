@@ -1,4 +1,4 @@
-# 💳 **Projet Banque - Arij Hamraoui**  
+# 💳 **Banque - Architecture SOA**  
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) ![MuleSoft](https://img.shields.io/badge/MuleSoft-005757?style=for-the-badge&logo=mulesoft&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![ActiveMQ](https://img.shields.io/badge/ActiveMQ-B22222?style=for-the-badge&logo=apache&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
