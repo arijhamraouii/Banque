@@ -7,7 +7,7 @@
 ## 🎯 **Description du Projet**  
 ** Banque est une solution intégrée utilisant une architecture **SOA (Service-Oriented Architecture)**, basée sur :  
 - ☕ **Spring Boot** pour les services REST.  
-- 💻 **C#** pour les services SOAP.  
+- 💻 **C#** pour le service SOAP.  
 - 🐴 **MuleSoft** pour l'orchestration des flux (**ESB**).  
 - 🗄️ **MySQL** pour la gestion des données.  
 - 📩 **ActiveMQ** pour la gestion des messages asynchrones.  
@@ -16,7 +16,7 @@
 ### **Fonctionnalités :**  
 - Création et gestion des comptes bancaires.  
 - Gestion des transactions bancaires.  
-- Notifications automatiques via ActiveMQ.  
+- Notifications.  
 - Génération de rapports financiers.  
 - Système de satisfaction client.
 
